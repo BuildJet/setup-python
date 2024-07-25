@@ -150,6 +150,7 @@ async function run() {
     }
     const matchersPath = path.join(__dirname, '../..', '.github');
     core.info(`##[add-matcher]${path.join(matchersPath, 'python.json')}`);
+    process.exit(0);
   } catch (err) {
     core.setFailed((err as Error).message);
   }
